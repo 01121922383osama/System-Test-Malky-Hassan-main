@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:p1/core/constant/app_colors.dart';
+import 'package:p1/core/extension/extension.dart';
 import 'package:p1/core/styles/styles.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -8,11 +9,12 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      shape: const RoundedRectangleBorder(),
       child: Column(
         children: [
-          _buildLogoDash(),
+          _buildLogoDash(context),
           Expanded(
-            child: _buildListView(onTap: () {}),
+            child: _buildListView(),
           ),
         ],
       ),
@@ -20,50 +22,59 @@ class CustomDrawer extends StatelessWidget {
   }
 }
 
-Widget _buildLogoDash() {
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25),
-            shape: BoxShape.rectangle,
-            color: AppColors.blue,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.menu_book_outlined),
-              Text(
-                'Dashboard',
-                style: textStyle,
+Widget _buildLogoDash(BuildContext context) {
+  return FittedBox(
+    child: Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              shape: BoxShape.rectangle,
+              color: AppColors.blue.withOpacity(0.5),
+            ),
+            child: FittedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.menu_book_outlined),
+                  Text(
+                    'Dashboard',
+                    style: textStyle,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-        Builder(builder: (context) {
-          return IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () {
-              Scaffold.of(context).closeDrawer();
-            },
-          );
-        }),
-      ],
+          if (!context.isDesktop)
+            Builder(builder: (context) {
+              return IconButton(
+                icon: const Icon(Icons.close),
+                onPressed: () {
+                  Scaffold.of(context).closeDrawer();
+                },
+              );
+            }),
+        ],
+      ),
     ),
   );
 }
 
-Widget _buildListView({required Function() onTap}) {
+Widget _buildListView() {
   return ListView.builder(
     itemCount: _title.length,
     itemBuilder: (BuildContext context, int index) {
       return ListTile(
+        splashColor: AppColors.darkblue,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         hoverColor: AppColors.blue,
-        onTap: onTap,
+        onTap: () {},
         leading: Icon(
           _icons[index],
           color: _colors[index],

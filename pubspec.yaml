@@ -39,6 +39,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   flutter_bloc: ^8.1.4
   marquee_text: ^2.5.0+1
+  syncfusion_flutter_charts: ^24.2.7+1
 
 dev_dependencies:
   flutter_test:

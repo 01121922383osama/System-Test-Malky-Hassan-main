@@ -15,11 +15,11 @@ class BuildCustomAppBarDash extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemesAppCubit, bool>(
       builder: (context, state) {
-        return SliverAppBar(
+        return AppBar(
+          backgroundColor: state ? AppColors.dark : Colors.white,
           scrolledUnderElevation: 20,
-          floating: true,
-          leading: _buildDrawerButton(),
-          pinned: true,
+          automaticallyImplyLeading: false,
+          leading: !context.isDesktop ? _buildDrawerButton() : null,
           elevation: 15,
           title: Container(
             decoration: BoxDecoration(

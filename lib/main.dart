@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 scaffoldBackgroundColor: AppColors.white,
               ),
-              initialRoute: AppRouter.dashboard,
+              initialRoute: AppRouter.appPage,
               onGenerateRoute: Routers.ongenerateRouter,
               onUnknownRoute: Routers.errorRoute,
             );
