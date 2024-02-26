@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:p1/features/dashboard/presentation/widgets/build_custom_appbar.dart';
+import 'package:p1/features/dashboard/presentation/widgets/build_chart_widgets.dart';
 import 'package:p1/features/dashboard/presentation/widgets/build_info_widget.dart';
 import 'package:p1/features/dashboard/presentation/widgets/build_total_info.dart';
 
@@ -10,9 +10,9 @@ class BuildBodyDashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
-        BuildCustomAppBarDash(),
         BuildInfoWidget(),
         BuildTotalInfoWidget(),
+        BuildChartsWidgets(),
       ],
     );
   }

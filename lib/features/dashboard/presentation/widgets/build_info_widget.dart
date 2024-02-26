@@ -39,7 +39,7 @@ Widget _buildTutlesDashboard({
     margin: const EdgeInsets.all(15),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      color: state ? Colors.black87 : Colors.white,
+      color: state ? AppColors.dark : Colors.white,
     ),
     child: ListTile(
       enabled: true,

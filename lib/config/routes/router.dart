@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p1/features/App/presentation/pages/app_page.dart';
 
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import 'router_name.dart';
@@ -6,6 +7,8 @@ import 'router_name.dart';
 class Routers {
   static Route ongenerateRouter(RouteSettings settings) {
     switch (settings.name) {
+      case AppRouter.appPage:
+        return MaterialPageRoute(builder: (context) => const AppPage());
       case AppRouter.dashboard:
         return MaterialPageRoute(builder: (context) => const DashboardPage());
       default:

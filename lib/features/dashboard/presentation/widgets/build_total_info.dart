@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:p1/core/constant/app_colors.dart';
 import 'package:p1/core/extension/extension.dart';
 import 'package:p1/core/styles/styles.dart';
 import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
@@ -24,7 +25,7 @@ class BuildTotalInfoWidget extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: state ? Colors.black87 : Colors.white,
+                color: state ? AppColors.dark : Colors.white,
               ),
               child: _buildContent(index: index),
             );
@@ -72,33 +73,35 @@ List<int> _numbers = [
 ];
 
 Widget _buildContent({required int index}) {
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      CircleAvatar(
-        child: Icon(
-          _icons[index],
-          color: _colors[index],
+  return FittedBox(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CircleAvatar(
+          child: Icon(
+            _icons[index],
+            color: _colors[index],
+          ),
         ),
-      ),
-      Text(
-        _numbers[index].toString(),
-        style: textStyle.copyWith(
-          color: _colors[index],
-          fontWeight: FontWeight.bold,
-          fontSize: 15,
+        Text(
+          _numbers[index].toString(),
+          style: textStyle.copyWith(
+            color: _colors[index],
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
         ),
-      ),
-      Text(
-        _titles[index],
-        style: textStyle.copyWith(
-          color: _colors[index],
-          fontWeight: FontWeight.w500,
-          fontSize: 13,
+        Text(
+          _titles[index],
+          style: textStyle.copyWith(
+            color: _colors[index],
+            fontWeight: FontWeight.w500,
+            fontSize: 13,
+          ),
         ),
-      ),
-    ],
+      ],
+    ),
   );
 }
 
@@ -120,7 +123,7 @@ int _calculateCrossAxisCount(BuildContext context) {
   if (!context.isMobile) {
     return 2;
   } else if (context.isDesktop) {
-    return 4;
+    return 6;
   } else if (!context.isTablet) {
     return 2;
   } else {
