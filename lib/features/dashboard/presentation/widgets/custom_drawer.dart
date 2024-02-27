@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:p1/core/constant/app_colors.dart';
 import 'package:p1/core/extension/extension.dart';
 import 'package:p1/core/styles/styles.dart';
+import 'package:p1/features/App/presentation/cubit/app_cubit.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -65,21 +67,31 @@ Widget _buildLogoDash(BuildContext context) {
 }
 
 Widget _buildListView() {
-  return ListView.builder(
-    itemCount: _title.length,
-    itemBuilder: (BuildContext context, int index) {
-      return ListTile(
-        splashColor: AppColors.darkblue,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        hoverColor: AppColors.blue,
-        onTap: () {},
-        leading: Icon(
-          _icons[index],
-          color: _colors[index],
-        ),
-        title: Text(_title[index]),
+  return BlocBuilder<AppCubit, AppState>(
+    builder: (context, state) {
+      return ListView.builder(
+        itemCount: _title.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            selected: true,
+            selectedTileColor:
+                state.index == index ? AppColors.blue : Colors.transparent,
+            splashColor: AppColors.darkblue,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            hoverColor: AppColors.blue,
+            onTap: () {
+              BlocProvider.of<AppCubit>(context).toggled(index: index);
+              Scaffold.of(context).closeDrawer();
+            },
+            leading: Icon(
+              _icons[index],
+              color: _colors[index],
+            ),
+            title: Text(_title[index]),
+          );
+        },
       );
     },
   );
