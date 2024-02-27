@@ -15,7 +15,10 @@ class BuildCustomAppBarDash extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemesAppCubit, bool>(
       builder: (context, state) {
-        return AppBar(
+        return SliverAppBar(
+          floating: true,
+          pinned: true,
+          snap: true,
           backgroundColor: state ? AppColors.dark : Colors.white,
           scrolledUnderElevation: 20,
           automaticallyImplyLeading: false,
@@ -38,6 +41,7 @@ class BuildCustomAppBarDash extends StatelessWidget {
                   children: [
                     _buildIconMode(context: context, state: state),
                     _buildProfile(context),
+                    if (!context.isMobile) const SizedBox.shrink(),
                   ],
                 ),
               ],
@@ -102,7 +106,7 @@ Widget _buildProfile(BuildContext context) {
   return Container(
     padding: const EdgeInsets.only(left: 5, right: 5),
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(10),
       border: Border.all(color: AppColors.darkblue),
     ),
     child: Row(
