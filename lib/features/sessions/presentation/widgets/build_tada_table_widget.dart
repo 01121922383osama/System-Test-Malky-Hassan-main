@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import 'package:p1/features/sessions/presentation/cubit/sessions_cubit.dart';
 
 class BuildDataTableWidget extends StatelessWidget {
   const BuildDataTableWidget({super.key});
@@ -11,17 +12,72 @@ class BuildDataTableWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: BlocBuilder<ThemesAppCubit, bool>(
         builder: (context, state) {
-          return PaginatedDataTable(
-            columns: const [
-              DataColumn(label: Text('Date')),
-              DataColumn(label: Text('Time')),
-              DataColumn(label: Text('Location')),
-              DataColumn(label: Text('Type')),
-              DataColumn(label: Text('Status')),
-              DataColumn(label: Text('Action')),
-            ],
-            source: data,
-          );
+          return BlocBuilder<SessionsCubit, SessionsState>(
+              builder: (context, state) {
+            return PaginatedDataTable(
+              source: data,
+              showCheckboxColumn: false,
+              sortAscending: true,
+              sortColumnIndex: 0,
+              rowsPerPage: state.index,
+              columns: const [
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.date_range, color: Colors.blue),
+                      SizedBox(width: 5),
+                      Text('Date', style: TextStyle(color: Colors.blue)),
+                    ],
+                  ),
+                ),
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.timelapse_rounded, color: Colors.green),
+                      SizedBox(width: 5),
+                      Text('Time', style: TextStyle(color: Colors.green)),
+                    ],
+                  ),
+                ),
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.location_on, color: Colors.red),
+                      SizedBox(width: 5),
+                      Text('Location', style: TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                ),
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.adjust, color: Colors.deepOrange),
+                      SizedBox(width: 5),
+                      Text('Type', style: TextStyle(color: Colors.deepOrange)),
+                    ],
+                  ),
+                ),
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.stars_outlined, color: Colors.indigo),
+                      SizedBox(width: 5),
+                      Text('Status', style: TextStyle(color: Colors.indigo)),
+                    ],
+                  ),
+                ),
+                DataColumn(
+                  label: Row(
+                    children: [
+                      Icon(Icons.settings_applications, color: Colors.purple),
+                      SizedBox(width: 5),
+                      Text('Action', style: TextStyle(color: Colors.purple)),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          });
         },
       ),
     );
@@ -43,13 +99,69 @@ class DataClass extends DataTableSource {
   @override
   DataRow? getRow(int index) {
     return DataRow(
+      selected: true,
       cells: [
-        DataCell(Text(_mydata[index]['Date'])),
-        DataCell(Text(_mydata[index]['Time'])),
-        DataCell(Text(_mydata[index]['Location'])),
-        DataCell(Text(_mydata[index]['Type'])),
-        DataCell(Text(_mydata[index]['Status'])),
-        DataCell(Text(_mydata[index]['Action'])),
+        DataCell(
+          Row(
+            children: [
+              const Icon(Icons.date_range, color: Colors.blueGrey),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Date'],
+                  style: const TextStyle(color: Colors.blueGrey)),
+            ],
+          ),
+        ),
+        DataCell(
+          Row(
+            children: [
+              Icon(Icons.timelapse_rounded,
+                  color: Colors.green.withOpacity(0.8)),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Time'],
+                  style: TextStyle(color: Colors.green.withOpacity(0.8))),
+            ],
+          ),
+        ),
+        DataCell(
+          Row(
+            children: [
+              const Icon(Icons.location_on, color: Colors.redAccent),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Location'],
+                  style: const TextStyle(color: Colors.redAccent)),
+            ],
+          ),
+        ),
+        DataCell(
+          Row(
+            children: [
+              const Icon(Icons.adjust, color: Colors.orange),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Type'],
+                  style: const TextStyle(color: Colors.orange)),
+            ],
+          ),
+        ),
+        DataCell(
+          Row(
+            children: [
+              const Icon(Icons.stars_outlined, color: Colors.indigoAccent),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Status'],
+                  style: const TextStyle(color: Colors.indigoAccent)),
+            ],
+          ),
+        ),
+        DataCell(
+          Row(
+            children: [
+              const Icon(Icons.settings_applications, color: Colors.deepPurple),
+              const SizedBox(width: 5),
+              Text(_mydata[index]['Action'],
+                  style: const TextStyle(color: Colors.deepPurple)),
+            ],
+          ),
+        ),
       ],
     );
   }
