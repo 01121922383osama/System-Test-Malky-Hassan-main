@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:p1/features/App/presentation/cubit/app_cubit.dart';
-import 'package:p1/features/sessions/presentation/cubit/sessions_cubit.dart';
+import 'features/App/presentation/cubit/app_cubit.dart';
+import 'features/sessions/presentation/cubit/sessions_cubit.dart';
 
 import 'config/routes/router.dart';
 import 'config/routes/router_name.dart';

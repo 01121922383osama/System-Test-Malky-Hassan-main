@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:p1/config/routes/router_name.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/core/styles/styles.dart';
-import 'package:p1/core/widgets/custom_text_field_widget.dart';
+import '../../../../config/routes/router_name.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../../core/styles/styles.dart';
+import '../../../../core/widgets/custom_text_field_widget.dart';
 
 class BuildLoginWidget extends StatelessWidget {
   const BuildLoginWidget({super.key});

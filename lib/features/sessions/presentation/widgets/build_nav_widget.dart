@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/core/widgets/custom_text_field_widget.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
-import 'package:p1/features/sessions/presentation/widgets/build_custom_pop_menu.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../../core/widgets/custom_text_field_widget.dart';
+import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import 'build_custom_pop_menu.dart';
 
 class BuidlNavWidgets extends StatelessWidget {
   const BuidlNavWidgets({super.key});

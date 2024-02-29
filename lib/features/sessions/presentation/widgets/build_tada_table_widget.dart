@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
-import 'package:p1/features/sessions/presentation/cubit/sessions_cubit.dart';
+import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import '../cubit/sessions_cubit.dart';
 
 class BuildDataTableWidget extends StatelessWidget {
   const BuildDataTableWidget({super.key});
