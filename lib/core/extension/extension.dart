@@ -10,3 +10,12 @@ extension ScreenUTILS on BuildContext {
   bool get isDesktop => MediaQuery.of(this).size.width > 1024;
   bool get isWebBrowser => MediaQuery.of(this).size.width > 2048;
 }
+
+extension Navigation on BuildContext {
+  void pushNameRemoveUntil({required String routeName}) {
+    Navigator.of(this).pushNamedAndRemoveUntil(
+      routeName,
+      (route) => false,
+    );
+  }
+}
