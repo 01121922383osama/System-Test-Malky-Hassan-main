@@ -1,5 +1,6 @@
 class AppRouter {
-  static const String appPage = 'app_page';
-  static const String dashboard = 'dashboard_page';
-  static const String sessions = 'sessions_page';
+  static const String loginpage = "login";
+  static const String appPage = 'app';
+  static const String dashboard = 'dashboard';
+  static const String sessions = 'sessions';
 }

@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 scaffoldBackgroundColor: AppColors.white,
               ),
-              initialRoute: AppRouter.appPage,
+              initialRoute: AppRouter.loginpage,
               onGenerateRoute: Routers.ongenerateRouter,
               onUnknownRoute: Routers.errorRoute,
             );
