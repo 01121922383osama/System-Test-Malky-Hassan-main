@@ -1,53 +1,47 @@
 import 'package:flutter/material.dart';
 
-class BuildCustomPopMenuWidget extends StatelessWidget {
-  final String text;
-  const BuildCustomPopMenuWidget({super.key, required this.text});
+class BuildCustomDropDownMenu extends StatefulWidget {
+  final String? initialText;
+  final List<String>? itemList;
+
+  const BuildCustomDropDownMenu({
+    super.key,
+    this.initialText,
+    this.itemList,
+  });
+
+  @override
+  State<BuildCustomDropDownMenu> createState() =>
+      _BuildCustomDropDownMenuState();
+}
+
+class _BuildCustomDropDownMenuState extends State<BuildCustomDropDownMenu> {
+  String? selectedValue;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedValue = widget.initialText;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(text),
-          const Icon(Icons.arrow_drop_down),
-        ],
-      ),
-      itemBuilder: (context) {
-        return text == 'All' || text == '25'
-            ? [
-                PopupMenuItem(
-                  value: 1,
-                  child: Text(text == 'All' ? 'Select All' : '25'),
-                ),
-                PopupMenuItem(
-                  value: 2,
-                  child: Text(text == 'All' ? 'All' : '100'),
-                ),
-                PopupMenuItem(
-                  value: 3,
-                  child: Text(text == 'All' ? 'Lesson' : '500'),
-                ),
-                if (text == 'All')
-                  PopupMenuItem(
-                    value: 4,
-                    child: Text(text == 'All' ? 'Trial' : '1000'),
-                  ),
-              ]
-            : [
-                if (text == 'All Staf')
-                  const PopupMenuItem(
-                    value: 4,
-                    child: Text('Select Supporter'),
-                  ),
-                if (text == 'All Staf')
-                  const PopupMenuItem(
-                    value: 4,
-                    child: Text('All'),
-                  ),
-              ];
+    return DropdownButton<String>(
+      value: selectedValue,
+      hint: Text(widget.initialText ?? ''),
+      isExpanded: true,
+      underline: const SizedBox(),
+      onChanged: (String? newValue) {
+        setState(() {
+          selectedValue = newValue;
+        });
       },
+      items: widget.itemList?.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
     );
   }
 }

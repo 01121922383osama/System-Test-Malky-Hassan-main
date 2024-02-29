@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/widgets/custom_text_field_widget.dart';
@@ -72,10 +73,35 @@ double _calculateChildAspectRatio(BuildContext context) {
 }
 
 List<Widget> widgets = [
-  const BuildCustomPopMenuWidget(text: '25'),
-  const BuildCustomPopMenuWidget(text: 'All'),
-  const BuildCustomPopMenuWidget(text: 'All Staf'),
+  BuildCustomDropDownMenu(
+    initialText: '25',
+    itemList: list1,
+  ),
+  BuildCustomDropDownMenu(
+    initialText: 'All',
+    itemList: list2,
+  ),
+  BuildCustomDropDownMenu(
+    initialText: 'All Staf',
+    itemList: list3,
+  ),
   const CustomTextFieldWidget(),
   const Text('Upcoming'),
   const Text('Past'),
+];
+
+List<String> list1 = [
+  '25',
+  '100',
+  '250',
+];
+List<String> list2 = [
+  'Select All',
+  'All',
+  'Lessons',
+  'Trials',
+];
+List<String> list3 = [
+  'All Support',
+  'All Staf',
 ];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../config/routes/router_name.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
@@ -32,6 +33,7 @@ class BuildLoginWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: const CustomTextFieldWidget(
+            hintText: 'Email',
             prefixIcon: Icon(
               Icons.email,
               color: AppColors.darkblue,
@@ -50,6 +52,7 @@ class BuildLoginWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: const CustomTextFieldWidget(
+            hintText: 'Password',
             prefixIcon: Icon(
               Icons.lock,
               color: AppColors.darkblue,
