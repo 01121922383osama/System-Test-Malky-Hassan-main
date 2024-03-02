@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/styles/styles.dart';
@@ -72,24 +73,27 @@ Widget _buildListView() {
       return ListView.builder(
         itemCount: _title.length,
         itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            selected: true,
-            selectedTileColor:
-                state.index == index ? AppColors.blue : Colors.transparent,
-            splashColor: AppColors.darkblue,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+          return Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: ListTile(
+              selected: true,
+              selectedTileColor:
+                  state.index == index ? AppColors.blue : Colors.transparent,
+              splashColor: AppColors.darkblue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              hoverColor: AppColors.blue,
+              onTap: () {
+                BlocProvider.of<AppCubit>(context).toggled(index: index);
+                Scaffold.of(context).closeDrawer();
+              },
+              leading: Icon(
+                _icons[index],
+                color: _colors[index],
+              ),
+              title: Text(_title[index]),
             ),
-            hoverColor: AppColors.blue,
-            onTap: () {
-              BlocProvider.of<AppCubit>(context).toggled(index: index);
-              Scaffold.of(context).closeDrawer();
-            },
-            leading: Icon(
-              _icons[index],
-              color: _colors[index],
-            ),
-            title: Text(_title[index]),
           );
         },
       );

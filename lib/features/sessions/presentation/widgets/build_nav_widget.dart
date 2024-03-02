@@ -92,8 +92,8 @@ List<Widget> widgets = [
 
 List<String> list1 = [
   '25',
+  '50',
   '100',
-  '250',
 ];
 List<String> list2 = [
   'Select All',
