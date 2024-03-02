@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/features/auth/presentation/widgets/build_login_widget.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import 'build_login_widget.dart';
 
 class BodyLoginPage extends StatelessWidget {
   const BodyLoginPage({super.key});
@@ -28,7 +28,7 @@ class BodyLoginPage extends StatelessWidget {
 
 double _culcolateMargin(BuildContext context) {
   if (!context.isMobile) {
-    return 50;
+    return 5;
   } else if (!context.isTablet) {
     return 100;
   } else if (context.isDesktop) {

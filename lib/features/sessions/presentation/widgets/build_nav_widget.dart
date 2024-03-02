@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/core/widgets/custom_text_field_widget.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
-import 'package:p1/features/sessions/presentation/widgets/build_custom_pop_menu.dart';
+
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../../core/widgets/custom_text_field_widget.dart';
+import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import 'build_custom_pop_menu.dart';
 
 class BuidlNavWidgets extends StatelessWidget {
   const BuidlNavWidgets({super.key});
@@ -72,10 +73,35 @@ double _calculateChildAspectRatio(BuildContext context) {
 }
 
 List<Widget> widgets = [
-  const BuildCustomPopMenuWidget(text: '25'),
-  const BuildCustomPopMenuWidget(text: 'All'),
-  const BuildCustomPopMenuWidget(text: 'All Staf'),
+  BuildCustomDropDownMenu(
+    initialText: '25',
+    itemList: list1,
+  ),
+  BuildCustomDropDownMenu(
+    initialText: 'All',
+    itemList: list2,
+  ),
+  BuildCustomDropDownMenu(
+    initialText: 'All Staf',
+    itemList: list3,
+  ),
   const CustomTextFieldWidget(),
   const Text('Upcoming'),
   const Text('Past'),
+];
+
+List<String> list1 = [
+  '25',
+  '50',
+  '100',
+];
+List<String> list2 = [
+  'Select All',
+  'All',
+  'Lessons',
+  'Trials',
+];
+List<String> list3 = [
+  'All Support',
+  'All Staf',
 ];

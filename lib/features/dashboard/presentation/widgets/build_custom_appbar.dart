@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:marquee_text/marquee_text.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/core/styles/styles.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../../core/styles/styles.dart';
+import '../cubit/themes/themes_app_cubit.dart';
 
 class BuildCustomAppBarDash extends StatelessWidget {
   const BuildCustomAppBarDash({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
-import 'package:p1/features/dashboard/presentation/widgets/build_circle.dart';
-import 'package:p1/features/dashboard/presentation/widgets/build_dounut_circle_charts_widget.dart';
-import 'package:p1/features/dashboard/presentation/widgets/build_plans_charts.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../cubit/themes/themes_app_cubit.dart';
+import 'build_circle.dart';
+import 'build_dounut_circle_charts_widget.dart';
+import 'build_plans_charts.dart';
 
 class BuildChartsWidgets extends StatelessWidget {
   const BuildChartsWidgets({super.key});
