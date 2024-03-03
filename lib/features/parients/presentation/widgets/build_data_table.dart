@@ -10,7 +10,7 @@ class BuildDataTableParientsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final DataTableSource data = DataClassParients();
+    final DataTableSource data = DataClassParients(context: context);
     return SliverToBoxAdapter(
       child: BlocBuilder<ThemesAppCubit, bool>(
         builder: (context, state) {

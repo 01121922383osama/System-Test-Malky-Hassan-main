@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:p1/features/Profile/presentation/pages/profile_page.dart';
 import 'package:p1/features/parients/presentation/pages/parients_page.dart';
 
 import '../../../../core/extension/extension.dart';
@@ -37,4 +37,33 @@ List<Widget> _pages = [
   const DashboardPage(),
   const SessionsPage(),
   const ParientsPage(),
+  // !
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  const DefualtScafold(),
+  // !
+  const ProfilePage(),
 ];
+
+class DefualtScafold extends StatelessWidget {
+  const DefualtScafold({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: const CustomDrawer(),
+      appBar: AppBar(),
+      body: const Center(
+        child: Text('Not Created Yet'),
+      ),
+    );
+  }
+}

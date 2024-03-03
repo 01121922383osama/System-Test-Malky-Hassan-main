@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:p1/features/Profile/presentation/pages/profile_page.dart';
+
 import '../../features/App/presentation/pages/app_page.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
-
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import 'router_name.dart';
 
@@ -14,6 +15,8 @@ class Routers {
         return MaterialPageRoute(builder: (context) => const AppPage());
       case AppRouter.dashboard:
         return MaterialPageRoute(builder: (context) => const DashboardPage());
+      case AppRouter.profile:
+        return MaterialPageRoute(builder: (context) => const ProfilePage());
       default:
         return errorRoute(settings);
     }

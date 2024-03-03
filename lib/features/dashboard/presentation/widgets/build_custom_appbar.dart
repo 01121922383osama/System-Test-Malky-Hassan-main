@@ -3,13 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:marquee_text/marquee_text.dart';
+
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/styles/styles.dart';
 import '../cubit/themes/themes_app_cubit.dart';
 
-class BuildCustomAppBarDash extends StatelessWidget {
-  const BuildCustomAppBarDash({super.key});
+class CustomAppBarWidget extends StatelessWidget {
+  const CustomAppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,24 +25,24 @@ class BuildCustomAppBarDash extends StatelessWidget {
           automaticallyImplyLeading: false,
           leading: !context.isDesktop ? _buildDrawerButton() : null,
           elevation: 15,
-          title: Container(
+          flexibleSpace: Container(
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  width: context.width / 2.5,
-                  child: _buildTextWidget(
-                    color: state ? AppColors.white : AppColors.black,
-                  ),
+                _buildTextWidget(
+                  context,
+                  color: state ? AppColors.white : AppColors.black,
                 ),
                 Row(
                   children: [
                     _buildIconMode(context: context, state: state),
                     _buildProfile(context),
-                    if (!context.isMobile) const SizedBox.shrink(),
+                    // if (!context.isMobile) const SizedBox(),
+                    const SizedBox(width: 5),
                   ],
                 ),
               ],
@@ -53,13 +54,14 @@ class BuildCustomAppBarDash extends StatelessWidget {
   }
 }
 
-Widget _buildTextWidget({required Color color}) {
-  return SizedBox(
-    width: 50.w,
+Widget _buildTextWidget(BuildContext context, {required Color color}) {
+  return Container(
+    margin: EdgeInsets.only(left: _countMarginAppBar(context)),
+    width: _countWidthTitle(context),
     child: MarqueeText(
       text: const TextSpan(
         text:
-            'Build By Osama                                                     Build By Osama                                                     Build By Osama',
+            'Build By Osama                                                     Build By Osama                                                     Build By Osama                                                     Build By Osama                                                     Build By Osama                                                     Build By Osama',
       ),
       style: TextStyle(
         fontSize: 22,
@@ -68,6 +70,19 @@ Widget _buildTextWidget({required Color color}) {
       speed: 30,
     ),
   );
+}
+
+double _countWidthTitle(BuildContext context) {
+  if (!context.isMobile) {
+    return 170.w;
+  }
+  if (context.isTablet) {
+    return 200.w;
+  }
+  if (context.isDesktop) {
+    return 150;
+  }
+  return 100;
 }
 
 Widget _buildDrawerButton() {
@@ -140,4 +155,17 @@ Widget _buildCircleAvarar() {
     onPressed: () {},
     icon: const Icon(Icons.person),
   );
+}
+
+double _countMarginAppBar(BuildContext context) {
+  if (!context.isMobile) {
+    return 50;
+  }
+  if (!context.isTablet) {
+    return 50;
+  }
+  if (context.isDesktop) {
+    return 15;
+  }
+  return 50;
 }

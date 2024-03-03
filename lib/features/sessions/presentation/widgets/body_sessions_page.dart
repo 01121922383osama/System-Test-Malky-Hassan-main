@@ -12,7 +12,7 @@ class BodySessionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        const BuildCustomAppBarDash(),
+        const CustomAppBarWidget(),
         someSpacing(),
         const BuidlNavWidgets(),
         someSpacing(),
