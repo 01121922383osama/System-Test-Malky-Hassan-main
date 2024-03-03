@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/features/sessions/presentation/widgets/data_class.dart';
+import 'package:p1/features/sessions/presentation/widgets/data_sessions_class.dart';
 
 import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
 import '../cubit/sessions_cubit.dart';
 
-class BuildDataTableWidget extends StatelessWidget {
-  const BuildDataTableWidget({super.key});
+class BuildDataTableSessionsWidget extends StatelessWidget {
+  const BuildDataTableSessionsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final DataTableSource data = DataClass();
+    final DataTableSource data = DataClassSessions();
     return SliverToBoxAdapter(
       child: BlocBuilder<ThemesAppCubit, bool>(
         builder: (context, state) {
@@ -22,62 +22,25 @@ class BuildDataTableWidget extends StatelessWidget {
               sortAscending: true,
               sortColumnIndex: 0,
               rowsPerPage: state.index,
-              columns: const [
-                DataColumn(
+              columns: List.generate(_texts.length, (index) {
+                return DataColumn(
                   label: Row(
                     children: [
-                      Icon(Icons.date_range, color: Colors.blue),
-                      SizedBox(width: 5),
-                      Text('Date', style: TextStyle(color: Colors.blue)),
+                      Icon(
+                        _icons[index],
+                        color: _colors[index],
+                      ),
+                      const SizedBox(width: 5),
+                      Text(
+                        _texts[index],
+                        style: TextStyle(
+                          color: _colors[index],
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                DataColumn(
-                  label: Row(
-                    children: [
-                      Icon(Icons.timelapse_rounded, color: Colors.green),
-                      SizedBox(width: 5),
-                      Text('Time', style: TextStyle(color: Colors.green)),
-                    ],
-                  ),
-                ),
-                DataColumn(
-                  label: Row(
-                    children: [
-                      Icon(Icons.location_on, color: Colors.red),
-                      SizedBox(width: 5),
-                      Text('Location', style: TextStyle(color: Colors.red)),
-                    ],
-                  ),
-                ),
-                DataColumn(
-                  label: Row(
-                    children: [
-                      Icon(Icons.adjust, color: Colors.deepOrange),
-                      SizedBox(width: 5),
-                      Text('Type', style: TextStyle(color: Colors.deepOrange)),
-                    ],
-                  ),
-                ),
-                DataColumn(
-                  label: Row(
-                    children: [
-                      Icon(Icons.stars_outlined, color: Colors.indigo),
-                      SizedBox(width: 5),
-                      Text('Status', style: TextStyle(color: Colors.indigo)),
-                    ],
-                  ),
-                ),
-                DataColumn(
-                  label: Row(
-                    children: [
-                      Icon(Icons.settings_applications, color: Colors.purple),
-                      SizedBox(width: 5),
-                      Text('Action', style: TextStyle(color: Colors.purple)),
-                    ],
-                  ),
-                ),
-              ],
+                );
+              }),
             );
           });
         },
@@ -85,3 +48,29 @@ class BuildDataTableWidget extends StatelessWidget {
     );
   }
 }
+
+List<String> _texts = [
+  'Name',
+  'Time',
+  'Date',
+  'Agent',
+  'Lesson',
+  'Status',
+];
+List<IconData> _icons = [
+  Icons.person,
+  Icons.timelapse_rounded,
+  Icons.date_range,
+  Icons.adjust,
+  Icons.class_,
+  Icons.settings_applications,
+];
+
+List<Color> _colors = [
+  Colors.blue,
+  Colors.green,
+  Colors.red,
+  Colors.deepOrange,
+  Colors.indigo,
+  Colors.purple
+];

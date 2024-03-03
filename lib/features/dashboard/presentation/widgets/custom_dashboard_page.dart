@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'build_chart_widgets.dart';
 import 'build_custom_appbar.dart';
 import 'build_info_widget.dart';
@@ -11,7 +12,7 @@ class BuildBodyDashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
-        BuildCustomAppBarDash(),
+        CustomAppBarWidget(),
         BuildInfoWidget(),
         BuildTotalInfoWidget(),
         BuildChartsWidgets(),
