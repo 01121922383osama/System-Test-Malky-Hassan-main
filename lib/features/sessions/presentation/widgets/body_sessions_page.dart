@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:p1/core/widgets/some_spacing.dart';
+
 import '../../../dashboard/presentation/widgets/build_custom_appbar.dart';
 import 'build_nav_widget.dart';
 import 'build_tada_table_widget.dart';
@@ -8,11 +10,14 @@ class BodySessionsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       slivers: [
-        BuildCustomAppBarDash(),
-        BuidlNavWidgets(),
-        BuildDataTableWidget(),
+        const BuildCustomAppBarDash(),
+        someSpacing(),
+        const BuidlNavWidgets(),
+        someSpacing(),
+        const BuildDataTableSessionsWidget(),
+        someSpacing(),
       ],
     );
   }

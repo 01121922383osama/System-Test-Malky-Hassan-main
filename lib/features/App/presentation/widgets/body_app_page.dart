@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:p1/features/parients/presentation/pages/parients_page.dart';
 
 import '../../../../core/extension/extension.dart';
 import '../../../dashboard/presentation/pages/dashboard_page.dart';
@@ -35,4 +36,5 @@ class BodyAppPage extends StatelessWidget {
 List<Widget> _pages = [
   const DashboardPage(),
   const SessionsPage(),
+  const ParientsPage(),
 ];

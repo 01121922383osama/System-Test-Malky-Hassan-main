@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constant/app_colors.dart';
+
 import '../../../../core/extension/extension.dart';
 import 'build_login_widget.dart';
 
@@ -11,7 +11,6 @@ class BodyLoginPage extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: AppColors.white,
         borderRadius: BorderRadius.circular(5),
         image: const DecorationImage(
           image: AssetImage('assets/login.png'),
@@ -32,7 +31,7 @@ double _culcolateMargin(BuildContext context) {
   } else if (!context.isTablet) {
     return 100;
   } else if (context.isDesktop) {
-    return 200;
+    return MediaQuery.of(context).size.height / 5;
   } else {
     return 150;
   }

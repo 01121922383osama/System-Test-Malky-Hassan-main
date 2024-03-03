@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'features/App/presentation/cubit/app_cubit.dart';
-import 'features/sessions/presentation/cubit/sessions_cubit.dart';
 
 import 'config/routes/router.dart';
 import 'config/routes/router_name.dart';
 import 'core/constant/app_colors.dart';
+import 'features/App/presentation/cubit/app_cubit.dart';
 import 'features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import 'features/sessions/presentation/cubit/sessions_cubit.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 brightness: state ? Brightness.dark : Brightness.light,
                 useMaterial3: true,
-                scaffoldBackgroundColor: AppColors.white,
+                scaffoldBackgroundColor:
+                    state ? AppColors.darkLight : AppColors.white,
               ),
               initialRoute: AppRouter.loginpage,
               onGenerateRoute: Routers.ongenerateRouter,
