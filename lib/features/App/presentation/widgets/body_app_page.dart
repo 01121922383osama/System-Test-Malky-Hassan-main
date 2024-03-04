@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/features/Profile/presentation/pages/profile_page.dart';
-import 'package:p1/features/parients/presentation/pages/parients_page.dart';
+import '../../../Profile/presentation/pages/profile_page.dart';
+import '../../../parients/presentation/pages/parients_page.dart';
 
 import '../../../../core/extension/extension.dart';
 import '../../../dashboard/presentation/pages/dashboard_page.dart';

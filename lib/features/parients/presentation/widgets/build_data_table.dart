@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/features/parients/presentation/widgets/data_parients_class.dart';
-import 'package:p1/features/sessions/presentation/cubit/sessions_cubit.dart';
+import 'data_parients_class.dart';
+import '../../../sessions/presentation/cubit/sessions_cubit.dart';
 
 import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
 

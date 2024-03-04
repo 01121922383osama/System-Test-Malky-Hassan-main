@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/features/sessions/presentation/widgets/data_sessions_class.dart';
+import 'data_sessions_class.dart';
 
 import '../../../dashboard/presentation/cubit/themes/themes_app_cubit.dart';
 import '../cubit/sessions_cubit.dart';

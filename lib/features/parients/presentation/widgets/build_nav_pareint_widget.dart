@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:p1/core/extension/extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../../core/widgets/custom_text_field_widget.dart';
+import 'build_pop_menu.dart';
 
 class BuildNavPareintWidget extends StatelessWidget {
   const BuildNavPareintWidget({super.key});
@@ -14,13 +18,38 @@ class BuildNavPareintWidget extends StatelessWidget {
       itemCount: 4,
       itemBuilder: (context, index) {
         return Container(
+          padding: const EdgeInsets.all(5),
           margin: const EdgeInsets.all(5),
-          color: Colors.red,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: AppColors.darkblue.withOpacity(0.5)),
+          ),
+          child: _widgets[index],
         );
       },
     );
   }
 }
+
+List<Widget> _widgets = [
+  const BuildPopMenuButtonWidget(
+      initialText: '25', itemList: ['25', '50', '100']),
+  const BuildPopMenuButtonWidget(
+      initialText: 'All', itemList: ['All', 'Active', 'Suspend']),
+  const CustomTextFieldWidget(),
+  Align(
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+      onPressed: () {},
+      child: const Text('Add'),
+    ),
+  ),
+];
 
 int _calculateCrossAxisCount(BuildContext context) {
   if (!context.isMobile) {
@@ -36,14 +65,14 @@ int _calculateCrossAxisCount(BuildContext context) {
 
 double _calculateChildAspectRatio(BuildContext context) {
   if (!context.isMobile) {
-    return 4.5;
+    return 3.h;
   }
   if (!context.isTablet) {
     return 6;
   }
   if (context.isDesktop) {
-    return 6;
+    return 4.h;
   } else {
-    return 5;
+    return 4;
   }
 }

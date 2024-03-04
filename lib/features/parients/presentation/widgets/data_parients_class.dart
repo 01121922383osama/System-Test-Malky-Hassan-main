@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:p1/core/widgets/show_toast.dart';
-import 'package:p1/features/App/presentation/cubit/app_cubit.dart';
+import '../../../../core/widgets/show_toast.dart';
+import '../../../App/presentation/cubit/app_cubit.dart';
 import 'package:pie_menu/pie_menu.dart';
 
 class DataClassParients extends DataTableSource {
