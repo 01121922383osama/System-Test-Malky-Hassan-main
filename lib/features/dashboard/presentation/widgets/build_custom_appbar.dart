@@ -25,27 +25,29 @@ class CustomAppBarWidget extends StatelessWidget {
           automaticallyImplyLeading: false,
           leading: !context.isDesktop ? _buildDrawerButton() : null,
           elevation: 15,
-          flexibleSpace: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _buildTextWidget(
-                  context,
-                  color: state ? AppColors.white : AppColors.black,
-                ),
-                Row(
-                  children: [
-                    _buildIconMode(context: context, state: state),
-                    _buildProfile(context),
-                    // if (!context.isMobile) const SizedBox(),
-                    const SizedBox(width: 5),
-                  ],
-                ),
-              ],
+          flexibleSpace: SafeArea(
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _buildTextWidget(
+                    context,
+                    color: state ? AppColors.white : AppColors.black,
+                  ),
+                  Row(
+                    children: [
+                      _buildIconMode(context: context, state: state),
+                      _buildProfile(context),
+                      // if (!context.isMobile) const SizedBox(),
+                      const SizedBox(width: 5),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );
