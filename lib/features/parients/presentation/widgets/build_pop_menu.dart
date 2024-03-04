@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubit/sessions_cubit.dart';
+import '../../../sessions/presentation/cubit/sessions_cubit.dart';
 
-class BuildCustomDropDownMenu extends StatefulWidget {
+class BuildPopMenuButtonWidget extends StatefulWidget {
   final String? initialText;
   final List<String>? itemList;
 
-  const BuildCustomDropDownMenu({
+  const BuildPopMenuButtonWidget({
     super.key,
     this.initialText,
     this.itemList,
   });
 
   @override
-  State<BuildCustomDropDownMenu> createState() =>
-      _BuildCustomDropDownMenuState();
+  State<BuildPopMenuButtonWidget> createState() =>
+      _BuildPopMenuButtonWidgetState();
 }
 
-class _BuildCustomDropDownMenuState extends State<BuildCustomDropDownMenu> {
+class _BuildPopMenuButtonWidgetState extends State<BuildPopMenuButtonWidget> {
   String? selectedValue;
 
   @override
@@ -42,22 +42,7 @@ class _BuildCustomDropDownMenuState extends State<BuildCustomDropDownMenu> {
           },
           items: widget.itemList?.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
-              value: value,
-              child: Text(value),
-              onTap: () {
-                switch (value) {
-                  case '25':
-                    context.read<SessionsCubit>().changeIndex(25);
-                    break;
-                  case '50':
-                    context.read<SessionsCubit>().changeIndex(50);
-                    break;
-                  case '100':
-                    context.read<SessionsCubit>().changeIndex(100);
-                  default:
-                }
-              },
-            );
+                value: value, child: Text(value), onTap: () {});
           }).toList(),
         );
       },

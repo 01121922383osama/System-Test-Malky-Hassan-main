@@ -74,7 +74,7 @@ Widget _buildTextWidget(BuildContext context, {required Color color}) {
 
 double _countWidthTitle(BuildContext context) {
   if (!context.isMobile) {
-    return 170.w;
+    return 140.w;
   }
   if (context.isTablet) {
     return 200.w;

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
 import 'package:pie_menu/pie_menu.dart';
 
 class BuildProfileWidget extends StatelessWidget {
