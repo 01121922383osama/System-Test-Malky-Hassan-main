@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/features/Profile/presentation/widgets/build_table_profile_dashboard_widget.dart';
+import '../../../../core/constant/app_colors.dart';
+import 'build_table_profile_dashboard_widget.dart';
 
 class ProfileTableDash extends StatelessWidget {
   const ProfileTableDash({super.key});
