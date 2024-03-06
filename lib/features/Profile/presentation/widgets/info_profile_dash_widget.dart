@@ -24,7 +24,7 @@ class InfoProfile extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
                 title: Text(_texts[index]),
-                trailing: Text(_subText[index]),
+                subtitle: Text(_subText[index]),
               );
             },
           ),

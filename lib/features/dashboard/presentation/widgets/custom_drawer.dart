@@ -13,13 +13,15 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       shape: const RoundedRectangleBorder(),
-      child: Column(
-        children: [
-          _buildLogoDash(context),
-          Expanded(
-            child: _buildListView(),
-          ),
-        ],
+      child: SafeArea(
+        child: Column(
+          children: [
+            _buildLogoDash(context),
+            Expanded(
+              child: _buildListView(),
+            ),
+          ],
+        ),
       ),
     );
   }
