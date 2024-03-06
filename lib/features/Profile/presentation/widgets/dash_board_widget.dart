@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:p1/core/constant/app_colors.dart';
-import 'package:p1/core/extension/extension.dart';
-import 'package:p1/features/Profile/presentation/widgets/info_profile_dash_widget.dart';
-import 'package:p1/features/Profile/presentation/widgets/profile_table_dash.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import 'info_profile_dash_widget.dart';
+import 'profile_table_dash.dart';
 
 class DashBoardWidget extends StatelessWidget {
   const DashBoardWidget({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:p1/features/Profile/presentation/widgets/data_source.dart';
+import 'data_source.dart';
 
 class BuildTableDashProfileWidget extends StatelessWidget {
   const BuildTableDashProfileWidget({super.key});
