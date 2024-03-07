@@ -11,7 +11,6 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final TabController tabController =
         TabController(length: 4, vsync: Scaffold.of(context));
-
     return CustomScrollView(
       slivers: [
         const CustomAppBarWidget(),

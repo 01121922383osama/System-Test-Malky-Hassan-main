@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:p1/features/Profile/presentation/widgets/Courses/data_source_courses.dart';
 
-import 'data_source.dart';
-
-class BuildTableDashProfileWidget extends StatelessWidget {
-  const BuildTableDashProfileWidget({super.key});
+class BuildTableCoursesProfileWidget extends StatelessWidget {
+  const BuildTableCoursesProfileWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final DataTableSource data = DataSourceProfileDash();
+    final DataTableSource data = DataSourceProfileCourses();
     return PaginatedDataTable(
       source: data,
       showCheckboxColumn: false,
@@ -44,20 +43,24 @@ class BuildTableDashProfileWidget extends StatelessWidget {
 
 final List<String> _texts = [
   'Id',
-  'Name',
-  'Relation',
-  'Email',
+  'Student',
+  'Tutor',
+  'Course',
+  'Date',
+  'Sessions',
+  'Price',
   'Status',
-  'Actions',
 ];
 
 final List<IconData> _icons = [
   Icons.tag,
-  Icons.person,
-  Icons.group,
-  Icons.email,
+  Icons.timelapse_outlined,
+  Icons.group_rounded,
+  Icons.padding_outlined,
   Icons.info,
   Icons.settings,
+  Icons.attach_money,
+  Icons.check_circle_outline,
 ];
 
 final List<Color> _colors = [
@@ -67,4 +70,6 @@ final List<Color> _colors = [
   Colors.red,
   Colors.purple,
   Colors.teal,
+  Colors.indigoAccent,
+  Colors.indigo,
 ];

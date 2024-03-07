@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:p1/core/extension/extension.dart';
 
-import 'courses_widget.dart';
-import 'dash_board_widget.dart';
-import 'history_widget.dart';
-import 'lessons_widget.dart';
+import 'Courses/courses_widget.dart';
+import 'DashBoard/dash_board_widget.dart';
+import 'History/history_widget.dart';
+import 'Lessons/lessons_widget.dart';
 
 class BodyProfilePage extends StatelessWidget {
   final TabController tabController;

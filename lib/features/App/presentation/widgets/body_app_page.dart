@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../Profile/presentation/pages/profile_page.dart';
-import '../../../parients/presentation/pages/parients_page.dart';
+import 'package:p1/features/Profile/presentation/pages/add_courses_page.dart';
 
 import '../../../../core/extension/extension.dart';
+import '../../../Profile/presentation/pages/profile_page.dart';
 import '../../../dashboard/presentation/pages/dashboard_page.dart';
 import '../../../dashboard/presentation/widgets/custom_drawer.dart';
+import '../../../parients/presentation/pages/parients_page.dart';
 import '../../../sessions/presentation/pages/sessions_page.dart';
 import '../cubit/app_cubit.dart';
 
@@ -50,7 +51,10 @@ List<Widget> _pages = [
   const DefualtScafold(),
   const DefualtScafold(),
   // !
+  // FOR PROFILE
   const ProfilePage(),
+  // FOR ADD COURSES
+  const AddCoursesPage(),
 ];
 
 class DefualtScafold extends StatelessWidget {
