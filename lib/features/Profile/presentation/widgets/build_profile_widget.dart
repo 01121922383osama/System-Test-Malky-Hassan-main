@@ -74,7 +74,9 @@ class BuildProfileWidget extends StatelessWidget {
                             iconColor: AppColors.blue,
                           ),
                           tooltip: Text(_texts[index]),
-                          onSelect: () {},
+                          onSelect: () {
+                            tabController.animateTo(index);
+                          },
                           child: Icon(_icons[index]),
                         );
                       },

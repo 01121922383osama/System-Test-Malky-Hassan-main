@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:p1/features/Profile/presentation/widgets/build_table_profile_dashboard_widget.dart';
+import 'package:p1/features/Profile/presentation/widgets/DashBoard/build_table_profile_dashboard_widget.dart';
 
-import '../../../../core/constant/app_colors.dart';
-import '../../../../core/extension/extension.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/extension/extension.dart';
 import 'info_profile_dash_widget.dart';
 import 'profile_table_dash.dart';
 

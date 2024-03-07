@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:p1/features/Profile/presentation/cubit/profile_cubit.dart';
 
 import 'config/routes/router.dart';
 import 'config/routes/router_name.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => ThemesAppCubit()),
         BlocProvider(create: (_) => AppCubit()),
         BlocProvider(create: (_) => SessionsCubit()),
+        BlocProvider(create: (_) => ProfileCubit()),
       ],
       child: ScreenUtilInit(
         child: BlocBuilder<ThemesAppCubit, bool>(

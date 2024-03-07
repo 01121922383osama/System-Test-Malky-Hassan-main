@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_colors.dart';
 import 'build_table_profile_dashboard_widget.dart';
 
 class ProfileTableDash extends StatelessWidget {
