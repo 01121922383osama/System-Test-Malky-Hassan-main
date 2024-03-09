@@ -1,8 +1,7 @@
-import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:p1/core/extension/extension.dart';
-import 'package:p1/features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
+import 'package:p1/features/Profile/presentation/widgets/Add%20Courses/build_dropdown_buttom_search.dart';
 
 class Build2ItemAddCoursesWidget extends StatelessWidget {
   const Build2ItemAddCoursesWidget({super.key});
@@ -21,41 +20,29 @@ class Build2ItemAddCoursesWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
           ),
-          child: BuildDropDownButtomSearchWidget(
-            list: [
-              'list + ${index + 1}',
-              'list + ${index + 2}',
-              'list + ${index + 3}',
-              'list + ${index + 4}',
-              'list + ${index + 5}',
-              'list + ${index + 6}',
-            ],
-          ),
+          child: _widgetList[index],
         );
       },
     );
   }
 }
 
-class BuildDropDownButtomSearchWidget extends StatelessWidget {
-  final List<dynamic> list;
-  const BuildDropDownButtomSearchWidget({super.key, required this.list});
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<ThemesAppCubit, bool>(
-      builder: (context, state) {
-        return CustomDropdown.search(
-          excludeSelected: false,
-          initialItem: list[0],
-          hideSelectedFieldWhenExpanded: true,
-          items: list,
-          onChanged: (value) {},
-        );
-      },
-    );
-  }
-}
+List<Widget> _widgetList = [
+  const BuildDropDownButtomSearchWidget(
+    hintText: 'Course Student',
+    list: ['Osama Nabil'],
+  ),
+  const BuildDropDownButtomSearchWidget(
+    hintText: 'Course Tutor',
+    list: [
+      'Osama Nabil',
+      'Ahmed mohamed',
+      'yassen khalid',
+      'amina yasser',
+      'Omar ahmed',
+    ],
+  ),
+];
 
 int _calculateCrossAxisCount(BuildContext context) {
   if (!context.isMobile) {
@@ -67,14 +54,14 @@ int _calculateCrossAxisCount(BuildContext context) {
 
 double _calculateChildAspectRatio(BuildContext context) {
   if (!context.isMobile) {
-    return 4;
+    return 6.w;
   }
   if (!context.isTablet) {
-    return 3.5;
+    return 5;
   }
   if (context.isDesktop) {
-    return 5.1;
+    return 2.5.w;
   } else {
-    return 4;
+    return 3.w;
   }
 }
