@@ -124,7 +124,6 @@ Widget _buildProfile(BuildContext context) {
     padding: const EdgeInsets.only(left: 5, right: 5),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      border: Border.all(color: AppColors.darkblue),
     ),
     child: Row(
       children: [

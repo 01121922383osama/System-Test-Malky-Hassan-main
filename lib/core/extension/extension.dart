@@ -8,7 +8,6 @@ extension ScreenUTILS on BuildContext {
   bool get isMobile => MediaQuery.of(this).size.width > 550;
   bool get isTablet => MediaQuery.of(this).size.width > 768;
   bool get isDesktop => MediaQuery.of(this).size.width > 1024;
-  bool get isWebBrowser => MediaQuery.of(this).size.width > 2048;
 }
 
 extension Navigation on BuildContext {

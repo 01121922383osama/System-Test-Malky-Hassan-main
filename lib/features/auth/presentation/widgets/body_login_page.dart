@@ -14,8 +14,8 @@ class BodyLoginPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
         image: const DecorationImage(
           image: AssetImage('assets/login.png'),
-          opacity: 0.3,
-          fit: BoxFit.contain,
+          opacity: 0.2,
+          fit: BoxFit.cover,
         ),
       ),
       padding: const EdgeInsets.all(20),
@@ -31,8 +31,8 @@ double _culcolateMargin(BuildContext context) {
   } else if (!context.isTablet) {
     return 100;
   } else if (context.isDesktop) {
-    return MediaQuery.of(context).size.height / 5;
+    return 100;
   } else {
-    return 150;
+    return 100;
   }
 }
