@@ -9,7 +9,7 @@ import 'core/constant/app_colors.dart';
 import 'features/App/presentation/cubit/app_cubit.dart';
 import 'features/dashboard/presentation/cubit/themes/themes_app_cubit.dart';
 import 'features/sessions/presentation/cubit/sessions_cubit.dart';
-
+// test
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
