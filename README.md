@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=22C55E&center=true&vCenter=true&width=435&lines=%F0%9F%93%81+Freelancer+App+%F0%9F%93%81;Quran%2C+Azkar%2C+Prayer+Tracker;Multi-Language+%26+Dark+Mode" alt="Animated Header">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=22C55E&center=true&vCenter=true&width=435&lines=%F0%9F%93%81+System+App+%F0%9F%93%81;Dashboard%2C+Prayer+Tracker%2C+Profile;Multi-Language+%26+Dark+Mode" alt="Animated Header">
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 <video src="Readme/record_the_system.mp4" width="200" alt="The System"></video>
 
 ## 📸 Screenshots Gallery
-### 🏠 Home Page
+
 <img src="Readme/1.png" width="200" align="left" hspace="10">
 <img src="Readme/2.png" width="200" hspace="10">
 <img src="Readme/3.png" width="200" hspace="10">
