@@ -39,7 +39,7 @@
 <!-- video of the whole system -->
 
 ## 📹 Video Preview
-<video src="Readme/record_the_system.mp4" width="200" alt="The System"></video>
+<video src="Readme/record_the_system.mp4" width="600" height="400" controls></video>
 
 
 
