@@ -46,26 +46,26 @@
 ## 📸 Screenshots Gallery
 
 <img src="Readme/1.png" width="200" align="left" hspace="10">
-<img src="Readme/2.png" width="200" hspace="10">
-<img src="Readme/3.png" width="200" hspace="10">
-<img src="Readme/4.png" width="200" hspace="10">
-<img src="Readme/5.png" width="200" hspace="10">
-<img src="Readme/6.png" width="200" hspace="10">
-<img src="Readme/7.png" width="200" hspace="10">
-<img src="Readme/8.png" width="200" hspace="10">
-<img src="Readme/9.png" width="200" hspace="10">
-<img src="Readme/10.png" width="200" hspace="10">
-<img src="Readme/11.png" width="200" hspace="10">
-<img src="Readme/12.png" width="200" hspace="10">
-<img src="Readme/13.png" width="200" hspace="10">
-<img src="Readme/14.png" width="200" hspace="10">
-<img src="Readme/15.png" width="200" hspace="10">
-<img src="Readme/16.png" width="200" hspace="10">
-<img src="Readme/17.png" width="200" hspace="10">
-<img src="Readme/18.png" width="200" hspace="10">
-<img src="Readme/19.png" width="200" hspace="10">
-<img src="Readme/20.png" width="200" hspace="10">
-<img src="Readme/21.png" width="200" hspace="10">
+<img src="Readme/2.png" width="200" align="left" hspace="10">
+<img src="Readme/3.png" width="200" align="left" hspace="10">
+<img src="Readme/4.png" width="200" align="left" hspace="10">
+<img src="Readme/5.png" width="200" align="left" hspace="10">
+<img src="Readme/6.png" width="200" align="left" hspace="10">
+<img src="Readme/7.png" width="200" align="left" hspace="10">
+<img src="Readme/8.png" width="200" align="left" hspace="10">
+<img src="Readme/9.png" width="200" align="left" hspace="10">
+<img src="Readme/10.png" width="200" align="left" hspace="10">
+<img src="Readme/11.png" width="200" align="left" hspace="10">
+<img src="Readme/12.png" width="200" align="left" hspace="10">
+<img src="Readme/13.png" width="200" align="left" hspace="10">
+<img src="Readme/14.png" width="200" align="left" hspace="10">
+<img src="Readme/15.png" width="200" align="left" hspace="10">
+<img src="Readme/16.png" width="200" align="left" hspace="10">
+<img src="Readme/17.png" width="200" align="left" hspace="10">
+<img src="Readme/18.png" width="200" align="left" hspace="10">
+<img src="Readme/19.png" width="200" align="left" hspace="10">
+<img src="Readme/20.png" width="200" align="left" hspace="10">
+<img src="Readme/21.png" width="200" align="left" hspace="10">
 
 <br clear="left">
 
