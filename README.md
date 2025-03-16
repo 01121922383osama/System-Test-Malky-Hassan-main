@@ -2,11 +2,11 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=22C55E&center=true&vCenter=true&width=435&lines=%F0%9F%8E%A5+System+App+%F0%9F%92%BB;Modern+Dashboard+%26+Profile;%F0%9F%8C%8E+Dark%2FLight+Theme" alt="Animated Header">
 </p>
 
-<div align="center">
-  <img src="https://img.shields.io/github/stars/yourusername/repo?style=for-the-badge&color=FFD700" alt="Stars">
-  <img src="https://img.shields.io/badge/Flutter-3.19-blue?style=for-the-badge&logo=flutter" alt="Flutter">
-  <img src="https://img.shields.io/badge/Null%20Safety-✅-brightgreen?style=for-the-badge" alt="Null Safety">
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+  <img src="https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-informational?style=for-the-badge" alt="Platforms">
+</p>
 
 ---
 
@@ -23,12 +23,6 @@
 </p>
 
 ---
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
-  <img src="https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-informational?style=for-the-badge" alt="Platforms">
-</p>
-
 
 
 ## 🎥 App Preview
@@ -44,7 +38,10 @@
 
 <!-- video of the whole system -->
 
+## 📹 Video Preview
 <video src="Readme/record_the_system.mp4" width="200" alt="The System"></video>
+
+
 
 ## 📸 Screenshots Gallery
 
