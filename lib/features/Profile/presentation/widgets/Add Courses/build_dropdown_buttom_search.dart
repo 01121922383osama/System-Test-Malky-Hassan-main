@@ -18,7 +18,7 @@ class BuildDropDownButtomSearchWidget extends StatelessWidget {
           excludeSelected: false,
           items: list,
           hintText: hintText,
-          hintBuilder: (context, hint) {
+          hintBuilder: (context, hint, state) {
             return Text(
               hint,
               style: TextStyle(

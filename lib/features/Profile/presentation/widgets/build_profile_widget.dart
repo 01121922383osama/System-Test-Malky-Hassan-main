@@ -122,7 +122,7 @@ class BuildProfileWidget extends StatelessWidget {
             ? null
             : TabBar(
                 enableFeedback: true,
-                mouseCursor: MaterialStateMouseCursor.clickable,
+                mouseCursor: WidgetStateMouseCursor.clickable,
                 controller: tabController,
                 automaticIndicatorColorAdjustment: false,
                 isScrollable: true,
@@ -131,8 +131,7 @@ class BuildProfileWidget extends StatelessWidget {
                 indicatorWeight: 2,
                 indicatorPadding: const EdgeInsets.all(10),
                 labelColor: Colors.white,
-                overlayColor:
-                    const MaterialStatePropertyAll(Colors.transparent),
+                overlayColor: const WidgetStatePropertyAll(Colors.transparent),
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.transparent,
