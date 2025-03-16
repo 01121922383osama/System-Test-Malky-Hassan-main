@@ -1,10 +1,4 @@
 <p align="center">
-  <a href="Readme/record_the_system.mp4">
-    <img src="https://img.shields.io/badge/Click%20for%20Video%20Demo-%2300C7B7?style=for-the-badge&logo=video&logoColor=white">
-  </a>
-</p>
-
-<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=22C55E&center=true&vCenter=true&width=435&lines=%F0%9F%8E%A5+System+App+%F0%9F%92%BB;Modern+Dashboard+%26+Profile;%F0%9F%8C%8E+Dark%2FLight+Theme" alt="Animated Header">
 </p>
 
@@ -29,43 +23,59 @@
 </p>
 
 ---
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+  <img src="https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-informational?style=for-the-badge" alt="Platforms">
+</p>
 
-## 🎮 Live Preview
-<div align="center">
 
-| Light Mode | Dark Mode |
-|------------|-----------|
-| <img src="Readme/light_1.png" width="300"> | <img src="Readme/dark_1.png" width="300"> |
 
-</div>
+## 🎥 App Preview
+<!-- Replace with your GIFs later -->
+<p align="center">
+  <img src="Readme/home_page1.png" width="200" alt="Home Page 1">
+  <img src="Readme/home_page2.png" width="200" alt="Home Page 2">
+  <img src="Readme/home_page3.png" width="200" alt="Home Page 3">
+  <img src="Readme/home_page4.png" width="200" alt="Home Page 4">
+</p>
 
 ---
 
-## 🖼️ Screenshots Gallery
-### 🏠 Dashboard Views
-<div align="center">
-  <img src="Readme/1.png" width="200" style="border-radius: 15px; margin: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)">
-  <img src="Readme/2.png" width="200" style="border-radius: 15px; margin: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)">
-  <img src="Readme/3.png" width="200" style="border-radius: 15px; margin: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)">
-</div>
+<!-- video of the whole system -->
 
-### 📊 Data Visualization
-<div align="center">
-  <img src="Readme/4.png" width="200" style="border-radius: 15px; margin: 5px">
-  <img src="Readme/5.png" width="200" style="border-radius: 15px; margin: 5px">
-  <img src="Readme/6.png" width="200" style="border-radius: 15px; margin: 5px">
-</div>
+<video src="Readme/record_the_system.mp4" width="200" alt="The System"></video>
+
+## 📸 Screenshots Gallery
+
+<img src="Readme/1.png" width="200" align="left" hspace="10">
+<img src="Readme/2.png" width="200" hspace="10">
+<img src="Readme/3.png" width="200" hspace="10">
+<img src="Readme/4.png" width="200" hspace="10">
+<img src="Readme/5.png" width="200" hspace="10">
+<img src="Readme/6.png" width="200" hspace="10">
+<img src="Readme/7.png" width="200" hspace="10">
+<img src="Readme/8.png" width="200" hspace="10">
+<img src="Readme/9.png" width="200" hspace="10">
+<img src="Readme/10.png" width="200" hspace="10">
+<img src="Readme/11.png" width="200" hspace="10">
+<img src="Readme/12.png" width="200" hspace="10">
+<img src="Readme/13.png" width="200" hspace="10">
+<img src="Readme/14.png" width="200" hspace="10">
+<img src="Readme/15.png" width="200" hspace="10">
+<img src="Readme/16.png" width="200" hspace="10">
+<img src="Readme/17.png" width="200" hspace="10">
+<img src="Readme/18.png" width="200" hspace="10">
+<img src="Readme/19.png" width="200" hspace="10">
+<img src="Readme/20.png" width="200" hspace="10">
+<img src="Readme/21.png" width="200" hspace="10">
+
+<br clear="left">
 
 ---
 
 ## 🛠️ Tech Stack
-<div align="center">
-
 ```dart
-Flutter 3.19 • Dart 3.3
-├── State Management: BLoC Pattern
-├── Localization: EasyLocalization
-├── Styling: FlexColorScheme
-├── Animations: Lottie, Flutter Animate
-├── Charts: Syncfusion Flutter Charts
-└── CI/CD: Codemagic
+- Flutter & Dart
+- State Management: Bloc Pattern
+- Theme: Flexible Dark/Light Mode
