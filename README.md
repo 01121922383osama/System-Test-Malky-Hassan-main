@@ -37,7 +37,7 @@
 
 ## 📹 **Video Preview**
 <p align="center">
-  <img src="Readme/record_the_system.gif" width="600" alt="Video Preview">
+  <img src="Readme/record_the_system.gif" width="300" alt="Video Preview">
 </p>
 
 ---
