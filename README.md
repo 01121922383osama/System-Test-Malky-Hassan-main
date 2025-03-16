@@ -31,7 +31,6 @@
   <img src="Readme/home_page1.png" width="250" alt="Home Page 1">
   <img src="Readme/home_page2.png" width="250" alt="Home Page 2">
   <img src="Readme/home_page3.png" width="250" alt="Home Page 3">
-  <img src="Readme/home_page4.png" width="250" alt="Home Page 4">
 </p>
 
 ---
@@ -73,7 +72,7 @@
 ## 🛠️ **Tech Stack**
 ```dart
 🔹 Flutter & Dart
-🔹 State Management: Bloc Pattern
+🔹 State Management: Bloc / Cubit
 🔹 Theme: Flexible Dark/Light Mode
 🔹 Animations: Lottie & Custom Page Transitions
 🔹 Backend: Firebase & Cloud Firestore
@@ -82,19 +81,21 @@
 
 ---
 
-## 📂 **Folder Structure**
+## 📂 **Folder Structure (MVVM + Bloc/Cubit)**
 ```
 📛 system_app/
  ├── 📂 lib/                      # Main Source Code
- │    ├── 📂 ui/                  # UI Components
- │    ├── 📂 models/              # Data Models
- │    ├── 📂 services/            # API & Services
- │    ├── 📂 bloc/                # State Management
+ │    ├── 📂 core/                 # Core Functionality (Utilities, Constants, Services)
+ │    ├── 📂 data/                 # Data Layer (Models, APIs, Repository)
+ │    ├── 📂 domain/               # Business Logic (Use Cases, Repositories)
+ │    ├── 📂 presentation/         # UI & State Management
+ │    │    ├── 📂 screens/        # Screens (Views & Widgets)
+ │    │    ├── 📂 cubit/          # Bloc / Cubit State Management
  │    ├── main.dart               # Entry Point
  │
  ├── 📂 assets/                   # Images, Icons & Videos
- ├── 📂 Readme/                   # README Assets
- ├── pubspec.yaml                # Dependencies
+ ├── 📂 Readme/                    # README Assets
+ ├── pubspec.yaml                 # Dependencies
 ```
 
 ---
